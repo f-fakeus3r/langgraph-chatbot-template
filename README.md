@@ -21,21 +21,21 @@ Clone it, add your keys, and run your chatbot with guardrails, routing, tools, R
 
 ## 📚 Table of contents
 
-- [Overview](#-overview)
-- [How it works](#-how-it-works)
-- [LangGraph Framework](#-langgraph-framework)
-- [Requirements](#-requirements)
-- [Prerequisites](#-prerequisites)
+- [Overview](#overview)
+- [How it works](#how-it-works)
+- [LangGraph Framework](#langgraph-framework)
+- [Requirements](#requirements)
+- [Prerequisites](#prerequisites)
 - [Getting started](#-getting-started)
-- [Using the API](#-using-the-api)
-- [Configuration](-configuration)
-- [Customizing the template](-customizing-the-template)
-- [Project structure](#-project-structure)
-- [Debugging tips](#-debugging-tips)
-- [Troubleshooting](#-troubleshooting)
-- [Before you deploy](#-before-you-deploy)
-- [External Documentation](#-external-documentation)
-- [License](#-license)
+- [Using the API](#using-the-api)
+- [Configuration](#configuration)
+- [Customizing the template](#customizing-the-template)
+- [Project structure](#project-structure)
+- [Debugging tips](#debugging-tips)
+- [Troubleshooting](#troubleshooting)
+- [Before you deploy](#before-you-deploy)
+- [External Documentation](#external-documentation)
+- [License](#license)
 
 ---
 
@@ -52,8 +52,6 @@ This template ships with a complete, working conversation flow. Each piece is sm
 | **Per-session memory** | Conversation state is saved in Postgres (Supabase) and keyed by `session_id`. Send the same `session_id` and the bot remembers. Each agent also sees the recent turns the user had with the *other* agents. |
 | **Swappable LLM provider** | Models are called through [OpenRouter](https://openrouter.ai) (one key, hundreds of models), but any LangChain chat model works. |
 | **Live graph diagram** | `GET /chatbot/get-graph` returns a Mermaid diagram of the graph that is actually running. |
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
@@ -211,7 +209,7 @@ Inside the project's folder:
 uv sync
 ```
 
-This creates a `.venv` folder with Python 3.13 and every package from the [Requirements](#-requirements) table.
+This creates a `.venv` folder with Python 3.13 and every package from the [Requirements](#requirements) table.
 
 ### 4. Create your `.env` file
 
@@ -236,7 +234,7 @@ Then open `.env` and fill in at least the two **required** values:
   postgresql://postgres.abcdefgh:your-password@aws-0-us-east-1.pooler.supabase.com:5432/postgres
   ```
 
-You don't need to create any tables: LangGraph creates its checkpoint tables on the first start. Every variable is described in the [Configuration](#%EF%B8%8F-configuration) section.
+You don't need to create any tables: LangGraph creates its checkpoint tables on the first start. Every variable is described in the [Configuration](#configuration) section.
 
 ### 5. *(Optional)* Load sample documents for the RAG tool
 
