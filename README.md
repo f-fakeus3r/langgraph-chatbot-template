@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# 🦜🕸️ LangGraph Chatbot Template
+# LangGraph Chatbot Template
 
 **A beginner-friendly template for building AI assistants with [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview)**
 
