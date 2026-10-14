@@ -45,19 +45,19 @@ This template ships with a complete, working conversation flow. Each piece is sm
 
 | Feature | What it does |
 | --- | --- |
-| 🛡️ **Input and output guardrails** | An LLM checks every user message *before* it reaches an agent, and every answer *before* it reaches the user. Blocked turns get a safe fallback reply. If a guardrail call errors, it **fails closed** (blocks), so unchecked content never goes through. |
-| 🧭 **Classifier router** | A (small) model reads the message and decides which agent should answer. |
-| 💬 **General agent** | Handles small talk and general questions. No tools. |
-| 🔧 **Tool agent subgraph** | A tool-calling loop: the model calls tools, reads the results, and repeats until it can answer. Ships with a **RAG tool** (Qdrant vector search + reranking) and example tools to copy. |
-| 🧠 **Per-session memory** | Conversation state is saved in Postgres (Supabase) and keyed by `session_id`. Send the same `session_id` and the bot remembers. Each agent also sees the recent turns the user had with the *other* agents. |
-| 🔌 **Swappable LLM provider** | Models are called through [OpenRouter](https://openrouter.ai) (one key, hundreds of models), but any LangChain chat model works. |
-| 🗺️ **Live graph diagram** | `GET /chatbot/get-graph` returns a Mermaid diagram of the graph that is actually running. |
+| **Input and output guardrails** | An LLM checks every user message *before* it reaches an agent, and every answer *before* it reaches the user. Blocked turns get a safe fallback reply. If a guardrail call errors, it **fails closed** (blocks), so unchecked content never goes through. |
+| **Classifier router** | A (small) model reads the message and decides which agent should answer. |
+| **General agent** | Handles small talk and general questions. No tools. |
+| **Tool agent subgraph** | A tool-calling loop: the model calls tools, reads the results, and repeats until it can answer. Ships with a **RAG tool** (Qdrant vector search + reranking) and example tools to copy. |
+| **Per-session memory** | Conversation state is saved in Postgres (Supabase) and keyed by `session_id`. Send the same `session_id` and the bot remembers. Each agent also sees the recent turns the user had with the *other* agents. |
+| **Swappable LLM provider** | Models are called through [OpenRouter](https://openrouter.ai) (one key, hundreds of models), but any LangChain chat model works. |
+| **Live graph diagram** | `GET /chatbot/get-graph` returns a Mermaid diagram of the graph that is actually running. |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
-## 🔄 How it works
+## How it works
 
 Every message the user sends is one **turn**. A turn walks through the graph from `start` to `end`:
 
