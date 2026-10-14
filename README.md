@@ -13,7 +13,7 @@ Clone it, add your keys, and run your chatbot with guardrails, routing, tools, R
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![uv](https://img.shields.io/badge/uv-package%20manager-DE5FE9?logo=uv&logoColor=white)
 ![License](https://img.shields.io/github/license/f-fakeus3r/langgraph-chatbot-template)
-![GitHub stars](https://img.shields.io/github/stars/f-fakeus3r/langgraph-chatbot-template?style=social)
+![GitHub stars](https://img.shields.io/github/stars/f-fakeus3r/langgraph-chatbot-template?style=social&logo=github)
 
 </div>
 
