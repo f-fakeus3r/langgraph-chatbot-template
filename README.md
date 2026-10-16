@@ -19,6 +19,19 @@ Clone it, add your keys, and run your chatbot with guardrails, routing, tools, R
 
 ---
 
+## 🤖 Template assistant
+
+<div align="center">
+
+**Have questions about the code, or need help building with it?**<br>
+Ask the Template Assistant, a chatbot built with this template.
+
+<a href="https://langgraph-template-assistant.vercel.app"><img src="https://img.shields.io/badge/Ask_the_Template_Assistant-%E2%86%92-1C3C3C?style=for-the-badge&logo=vercel&logoColor=white" alt="Ask the Template Assistant"></a>
+
+</div>
+
+---
+
 ## 📚 Table of contents
 
 - [Overview](#overview)
